@@ -13,7 +13,7 @@
 8. [Support](#support)
 
 ## Overview
-Tor Bridges Harvester scans Tor relays to find reachable bridges, which are useful for bypassing network censorship. The program supports filtering relays by country or port, outputting results in Tor's `torrc` format, and integrating with Tor Browser's `prefs.js` configuration. It can also launch Tor Browser automatically after scanning.
+Tor Bridges Harvester scans Tor relays to find reachable bridges, which are useful for bypassing network censorship. The program supports filtering relays by country or port, outputting results in Tor's `torrc` format, and integrating with Tor Browser's `prefs.js` configuration. 
 
 There are two versions of the program:
 - **Console Version** (`main_grok.go`): Displays progress and errors in the console.
@@ -64,7 +64,7 @@ Both versions append found bridges to `_bridges.txt` in real-time.
 2. **Hidden Version**:
    - Double-click `tor-bridges-harvester.exe` or run it from a terminal:
      ```bash
-     .\tor-bridges-harvester.exe [options]
+     tor-bridges-harvester.exe [options]
      ```
    - No console window will appear. Check `_scanner.log` in the same directory for progress and errors.
 
@@ -93,7 +93,7 @@ The program supports the following options, passed as command-line arguments:
 
 **Example**:
 ```bash
-.\tor-bridges-harvester.exe -n 50 -g 10 -c "US,GB" -p 443 -o bridges.txt -torrc
+tor-bridges-harvester.exe -n 50 -g 10 -c "US,GB" -p 443 -o bridges.txt -torrc
 ```
 This tests 50 relays at a time, aims for 10 bridges, filters for US/GB relays on port 443, and outputs to `bridges.txt` in `torrc` format.
 
