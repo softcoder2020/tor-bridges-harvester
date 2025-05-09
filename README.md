@@ -93,7 +93,7 @@ The program supports the following options, passed as command-line arguments:
 
 **Example**:
 ```bash
-.\tor-bridges-harvester.exe -n 50 -g 10 -c "US,GB" -p 443 -o bridges.txt -torrc
+tor-bridges-harvester.exe -n 50 -g 10 -c "US,GB" -p 443 -o bridges.txt -torrc
 ```
 This tests 50 relays at a time, aims for 10 bridges, filters for US/GB relays on port 443, and outputs to `bridges.txt` in `torrc` format.
 
